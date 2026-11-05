@@ -1,0 +1,16 @@
+﻿filters:
+  and:
+    - file.folder == "posts"
+    - file.name != "index"
+views:
+  - type: list
+    name: 최근 글
+    order:
+      - file.name
+      - note.date
+    sort:
+      - property: note.date
+        direction: DESC
+    limit: 10
+
+
